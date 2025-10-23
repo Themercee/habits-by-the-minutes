@@ -15,13 +15,12 @@ Using [Bun](https://bun.com/):
 
 ```bash
 bun run dev
+```
+or with Tauri:
 
-# or
-
+```bash
 bun run tauri dev
 ```
-
-Tauri + React + Typescript
 
 
 ## Recommended IDE Setup
