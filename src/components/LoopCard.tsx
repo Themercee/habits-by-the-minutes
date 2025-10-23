@@ -15,7 +15,7 @@ export const LoopCard = ({ loop, onStart, onEdit, onDelete }: LoopCardProps) => 
   
   return (
     <Card className="p-6 hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-card to-card/50 border-border/50">
-      <div className="space-y-4 overflow-hidden">
+      <div className="flex flex-col space-y-4 overflow-hidden h-full">
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <h3 className="text-xl font-semibold text-foreground mb-2">{loop.name}</h3>
@@ -28,7 +28,7 @@ export const LoopCard = ({ loop, onStart, onEdit, onDelete }: LoopCardProps) => 
           </div>
         </div>
         
-        <div className="space-y-2">
+        <div className="space-y-2 flex-grow">
           {loop.activities.map((activity, index) => (
             <div key={activity.id} className="flex items-center gap-3 text-sm">
               <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-medium">

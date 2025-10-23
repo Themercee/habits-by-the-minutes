@@ -1,4 +1,8 @@
-# Tauri + React + Typescript
+# Habits by the minutes
+
+![Application example](./docs/example-01.png "Example")
+
+## Tauri + React + Typescript
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
 

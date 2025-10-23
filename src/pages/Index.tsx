@@ -60,7 +60,8 @@ const Index = () => {
                 <Clock className="w-7 h-7 text-white" />
               </div>
               <h1 className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Loop Timer
+	      {/* Loop Timer */ }
+	      Habits by the minutes
               </h1>
             </div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
