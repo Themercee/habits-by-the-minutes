@@ -1,10 +1,28 @@
 # Habits by the minutes
 
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Tauri](https://img.shields.io/badge/tauri-%2324C8DB.svg?style=for-the-badge&logo=tauri&logoColor=%23FFFFFF)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)
+
 ![Application example](./docs/example-01.png "Example")
 
-## Tauri + React + Typescript
+## Setup
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+The application use [Tauri](https://tauri.app/) to enable packaging the application, but when running in local, you also can run it with a Web browser.
+
+Using [Bun](https://bun.com/):
+
+```bash
+bun run dev
+
+# or
+
+bun run tauri dev
+```
+
+Tauri + React + Typescript
+
 
 ## Recommended IDE Setup
 
