@@ -15,7 +15,7 @@ export const LoopCard = ({ loop, onStart, onEdit, onDelete }: LoopCardProps) => 
   
   return (
     <Card className="p-6 hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-card to-card/50 border-border/50">
-      <div className="space-y-4">
+      <div className="space-y-4 overflow-hidden">
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <h3 className="text-xl font-semibold text-foreground mb-2">{loop.name}</h3>
@@ -42,15 +42,15 @@ export const LoopCard = ({ loop, onStart, onEdit, onDelete }: LoopCardProps) => 
           ))}
         </div>
         
-        <div className="flex gap-2 pt-2">
-          <Button onClick={() => onStart(loop)} className="flex-1" size="lg">
+        <div className="flex flex-wrap justify-center gap-2 pt-2">
+          <Button onClick={() => onStart(loop)} className="flex-1 w-32" size="lg">
             <Play className="w-4 h-4 mr-2" />
             Start Loop
           </Button>
-          <Button onClick={() => onEdit(loop)} variant="outline" size="lg">
+          <Button onClick={() => onEdit(loop)} className="flex-none w-12" variant="outline" size="lg">
             <Pencil className="w-4 h-4" />
           </Button>
-          <Button onClick={() => onDelete(loop.id)} variant="outline" size="lg">
+          <Button onClick={() => onDelete(loop.id)} className="flex-none w-12" variant="outline" size="lg">
             <Trash2 className="w-4 h-4" />
           </Button>
         </div>
