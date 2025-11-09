@@ -53,3 +53,7 @@ There are no testing frameworks configured in the project.
 ## Contribution Guidelines
 
 There are no contribution guidelines specified in the project.
+
+## Sound Feature
+
+A sound notification feature has been implemented. The `SoundManager` class in `src/components/SoundManager.ts` handles playing sounds for activity completion and loop completion. Sound files are located in `public/sounds/`.

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Loop } from "@/types/loop";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 import { Play, Pause, SkipForward, X } from "lucide-react";
 import { toast } from "sonner";
+import { soundManager } from "@/components/SoundManager";
 
 interface TimerViewProps {
   loop: Loop;
@@ -23,6 +23,11 @@ export const TimerView = ({ loop, onClose }: TimerViewProps) => {
     if (isPaused) return;
 
     const interval = setInterval(() => {
+      // Play activity end sound 3 seconds before activity ends
+      if (remainingSeconds === 4 && currentActivityIndex < loop.activities.length - 1) {
+        soundManager.playSound('activityEnd');
+      }
+
       setRemainingSeconds(prev => {
         if (prev <= 1) {
           // Move to next activity
@@ -35,6 +40,7 @@ export const TimerView = ({ loop, onClose }: TimerViewProps) => {
             return loop.activities[nextIndex].durationMinutes * 60;
           } else {
             // Loop completed
+            soundManager.playSound('loopComplete'); // Play sound when loop completes
             toast.success("Loop completed! 🎉", {
               description: "Great work!"
             });
