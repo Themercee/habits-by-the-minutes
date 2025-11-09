@@ -23,12 +23,12 @@ export const TimerView = ({ loop, onClose }: TimerViewProps) => {
     if (isPaused) return;
 
     const interval = setInterval(() => {
-      // Play activity end sound 3 seconds before activity ends
-      if (remainingSeconds === 4 && currentActivityIndex < loop.activities.length - 1) {
-        soundManager.playSound('activityEnd');
-      }
-
       setRemainingSeconds(prev => {
+        // Play activity end sound 3 seconds before activity ends
+        if (prev === 4 && currentActivityIndex < loop.activities.length - 1) {
+          soundManager.playSound('activityEnd');
+        }
+
         if (prev <= 1) {
           // Move to next activity
           if (currentActivityIndex < loop.activities.length - 1) {
